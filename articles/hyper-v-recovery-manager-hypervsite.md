@@ -125,7 +125,7 @@ After verifying the prerequisites, do the following:
 
 9. On the **Vault Settings** page, click **Browse** to select the key file. Specify the Azure Site Recovery subscription, the vault name, and the Hyper-V site to which the Hyper-V server belongs.
 
-	![Server registration](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_SelectKey.png)
+	![Server registration](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_SelectKey2.png)
 
 
 10. Registration starts to register the server in the vault.
