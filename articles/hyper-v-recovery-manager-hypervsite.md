@@ -92,7 +92,7 @@ After verifying the prerequisites, do the following:
 
 3. In **Create a Hyper-V Site** click **Create Hyper-V site**. Specify a site name and save.
 
-	![Hyper-V site](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_CreateSite2.png)
+	![Hyper-V site](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_CreateSite3.png)
 
 <a name="download"></a> <h2>Step 3: Prepare Hyper-V servers</h2>
 	
@@ -100,7 +100,7 @@ After verifying the prerequisites, do the following:
 1. In **Prepare Hyper-V servers**, click **Download a registration key** file.
 2. On the **Download Registration Key** page, click **Download** next to the site. Download the key to a safe location that can be easily accessed by the Hyper-V server. The key is valid for 5 days after it's generated.
 
-	![Registration key](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_DownloadKey2.png)
+	![Registration key](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_DownloadKey3.png)
 
 4. Click <b>Download the Provider</b> to obtain the latest version.
 5. Run the file on each Hyper-V server you want to register in the vault. The file installs two components:
@@ -128,15 +128,14 @@ After verifying the prerequisites, do the following:
 	![Server registration](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_SelectKey.png)
 
 
-11. Registration starts to register the server in the vault.
+10. Registration starts to register the server in the vault.
 
 	![Server registration](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_Provider6.png)
 
 11. After registration finishes metadata from the Hyper-V server is retrieved by Azure Site Recovery and the server is displayed on the **Hyper-V Sites** tab on the **Servers** page in the vault.
 
 	![Server registration](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_Provider7.png)
-
-
+**Note** For a **Hyper-V** Cluster, you need to perform steps 5-11 on each node of the **Failover Cluster**. Once all the nodes of the cluster is registered to Azure Site Recovery, protection of virtual machines will continue even if they migrate between the nodes of the **Failover Cluster** 
 <h2><a id="resources"></a>Step 4: Prepare resources</h2>
 
 
@@ -153,12 +152,12 @@ After verifying the prerequisites, do the following:
 
 2. In the **Protection Groups** tab, add a protection group. Specify a name, the source Hyper-V site, the target **Azure**, your Azure Site Recovery subscription name, and the Azure storage account.
 
-	![Protection group](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_ProtectionGroupCreate.png)
+	![Protection group](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_ProtectionGroupCreate3.png)
 
 
 2. In **Replication settings**, leave the default settings.
 
-	![Protection group](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_ProtectionGroup2.png)
+	![Protection group](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_ProtectionGroup4.png)
 
 
 <h2><a id="enablevirtual"></a>Step 6: Enable virtual machine protection</h2>
@@ -167,7 +166,7 @@ After verifying the prerequisites, do the following:
 1. On the <b>Machines</b> tab for the protection group, click <b>Add virtual machines to protection groups to enable protection</b>.
 2. On the **Enable Virtual Machine Protection** page select the virtual machines you want to protect. 
 
-	![Enable virtual machine protection](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_AddVM1.png)
+	![Enable virtual machine protection](./media/hyper-v-recovery-manager-configure-vault/SRHVSite_AddVM3.png)
 
 The Enable Protection jobs begins. You can track progress on the **Jobs** tab. After the Finalize Protection job runs the virtual machine is ready for failover. After protection is enabled and initial replication is complete, you can view virtual machines in Azure.
 
